@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background: rgb(82, 80, 100);
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App{
+    min-height: 100vh;
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.sideBar{
+    flex: 2;
+    border-right: 1px solid rgb(100,100,100);
+    background: #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+    flex: 9;
+}
+
+.logo{
+    margin-right: 1rem;
+}
+
+.newChatBtn {
+    /* margin-left: auto; */
+    margin-left: 25%;
+    min-height: 10%;
+    min-width: 10%;
+    background: transparent;
+    border: none !important;
+}
+
+.brand{
+    font-size: 2rem;
+}
+
+.upperSide {
+    padding: 2.5rem;
+    border-bottom: 1px solid rgb(100,100,100);
+    height: 70%;
+}
+
+.upperSideTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.addBtn {
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+.midBtn {
+    background: #5A4BFF;
+    border: none;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
+}
+
+.upperSideBottom {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 350px;
+}
+
+/* .upperSideBottom::-webkit-scrollbar-thumb {
+    background-color: rgb(107, 16, 16);
+    outline: 1px solid slategrey;
+} */
+
+.queryChat {
+    display: flex; /* Use flexbox to layout children */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: space-between; /* Space out children with equal spacing */
+    background: transparent;
+    color: rgba(222, 222, 222, 222);
+    width: 100%; 
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.queryChat:hover {
+    background: #323030;
+}
+
+.queryChat.selected {
+    background: #323030;
+}
+
+.query, .deleteBtn {
+    border: none;
+    background: none;
+}
+
+.query img, .deleteBtn img {
+    height: 1.75rem;
+}
+
+.queryTitle {
+    color: azure;
+    padding: 2rem;
+}
+
+.queryChat {
+    align-items: horizontal;
+}
+
+
+
+.lowerSide {
+    padding: 2rem;
+}
+
+.listItems {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.listItemsImg {
+    margin: 1rem;
+    padding-right: 1rem;
+}
+
+.listItemsImg:nth-child(1)>.listItemsImg {
+    margin-right: 0.5rem;
+}
+
+.listItemsImg:nth-child(3)>.listItemsImg {
+    margin-right: 0.75rem;
+}
+
+.main {
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 10rem;
+    margin-bottom: 1rem;
+}
+
+.discussion {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 550px;
+    width: 100%;
+    /* max-height: calc(100vh-0.5rem); */
+    padding: 1rem;
+}
+
+.chat {
+    margin: 1rem;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.chatImg {
+    object-fit: cover;
+    width: 3.5rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+}
+
+.bot {
+    background: rgba(28, 30, 58, 1);
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+
+.chatFooter {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.inp {
+    padding: 0.5rem;
+    background: rgb(104, 115, 201);
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.inp>input {
+    width: calc(100% - 3rem);
+    outline: none;
+    padding: 1.25rem;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.send {
+    background: transparent;
+    border: none;
+}
+
+.sendImg {
+    height: 3rem;
+    margin-left: 0.6rem;
+}
+
+.loading {
+    margin-left: 0.6rem;
+    color: wheat;
+}
+
+.chatFooter>p {
+    margin: 2rem 0;
 }
