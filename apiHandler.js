@@ -22,7 +22,7 @@ export async function sendMsgToHandler(message) {
         return extractContent(response.data);
       } catch (error) {
         console.error('Error:', error);
-        return "Check Internet connection, Error: 404";
+        return "Check Internet connection Error: 404";
       }
 
 }
